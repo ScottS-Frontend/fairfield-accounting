@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/(main)/page.module.scss [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"btnLight\": \"page-module-scss-module__PlTSCG__btnLight\",\n  \"cta\": \"page-module-scss-module__PlTSCG__cta\",\n  \"ctaContent\": \"page-module-scss-module__PlTSCG__ctaContent\",\n  \"featureCard\": \"page-module-scss-module__PlTSCG__featureCard\",\n  \"featureGrid\": \"page-module-scss-module__PlTSCG__featureGrid\",\n  \"featureIcon\": \"page-module-scss-module__PlTSCG__featureIcon\",\n  \"features\": \"page-module-scss-module__PlTSCG__features\",\n  \"goldAccent\": \"page-module-scss-module__PlTSCG__goldAccent\",\n  \"hero\": \"page-module-scss-module__PlTSCG__hero\",\n  \"heroButtons\": \"page-module-scss-module__PlTSCG__heroButtons\",\n  \"heroContent\": \"page-module-scss-module__PlTSCG__heroContent\",\n  \"heroSubtitle\": \"page-module-scss-module__PlTSCG__heroSubtitle\",\n  \"heroTitle\": \"page-module-scss-module__PlTSCG__heroTitle\",\n  \"home\": \"page-module-scss-module__PlTSCG__home\",\n  \"sectionSubtitle\": \"page-module-scss-module__PlTSCG__sectionSubtitle\",\n  \"sectionTitle\": \"page-module-scss-module__PlTSCG__sectionTitle\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"}}]
-}
