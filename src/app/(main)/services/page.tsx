@@ -104,7 +104,7 @@ export default function ServicesPage() {
               <StaggerItem key={index}>
                 <div className={styles.serviceCard}>
                   <div className={styles.iconWrapper}>{service.icon}</div>
-                  <h3>{service.title}</h3>
+                  <h2>{service.title}</h2>
                   <p>{service.description}</p>
                   <ul className={styles.featureList}>
                     {service.features.map((feature, i) => (

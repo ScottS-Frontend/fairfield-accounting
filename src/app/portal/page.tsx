@@ -1,32 +1,36 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { FaUser, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
-import styles from './portal.module.scss';
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { FaUser, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
+import styles from "./portal.module.scss";
 
 export default function PortalLogin() {
   const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Demo login - any email/password works
     if (email && password) {
       // Store demo user data
-      localStorage.setItem('portalUser', JSON.stringify({
-        name: 'John Anderson',
-        company: 'Anderson Consulting LLC',
-        email: email,
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face'
-      }));
-      router.push('/portal/dashboard');
+      localStorage.setItem(
+        "portalUser",
+        JSON.stringify({
+          name: "John Anderson",
+          company: "Anderson Consulting LLC",
+          email: email,
+          image:
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
+        }),
+      );
+      router.push("/portal/dashboard");
     } else {
-      setError('Please enter both email and password');
+      setError("Please enter both email and password");
     }
   };
 
@@ -62,7 +66,7 @@ export default function PortalLogin() {
             <div className={styles.inputWrapper}>
               <FaLock />
               <input
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -73,6 +77,7 @@ export default function PortalLogin() {
                 type="button"
                 className={styles.eyeBtn}
                 onClick={() => setShowPassword(!showPassword)}
+                aria-label={showPassword ? "Hide password" : "Show password"}
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>

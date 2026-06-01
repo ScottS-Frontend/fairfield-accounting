@@ -89,7 +89,7 @@ export default function ShopPage() {
                     </div>
                   )}
                   
-                  <h3>{pkg.name}</h3>
+                  <h2>{pkg.name}</h2>
                   <div className={styles.price}>
                     <span className={styles.amount}>{pkg.price}</span>
                     <span className={styles.period}>one-time</span>

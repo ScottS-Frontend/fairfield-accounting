@@ -9,22 +9,30 @@ export default function Home() {
   return (
     <div className={styles.home}>
       {/* Hero Section */}
-      <section className={styles.hero}>
+            <section className={styles.hero}>
         <div className="container">
-          <AnimatedSection className={styles.heroContent} delay={0.2}>
-            <h1 className={styles.heroTitle}>
-              Trusted Accounting &<br />
-              <span className={styles.goldAccent}>Financial Advisory</span>
-            </h1>
-            <p className={styles.heroSubtitle}>
-              Fairfield Accounting Services delivers expert tax preparation, bookkeeping, 
-              and strategic business advisory for individuals and growing companies.
-            </p>
-            <div className={styles.heroButtons}>
-              <Link href="/services" className="btn-primary">Our Services</Link>
-              <Link href="/booking" className={styles.btnLight}>Book a Consultation</Link>
-            </div>
-          </AnimatedSection>
+          <div className={styles.heroGrid}>
+            <AnimatedSection className={styles.heroContent} delay={0.2}>
+              <h1 className={styles.heroTitle}>
+                Trusted Accounting &<br />
+                <span className={styles.goldAccent}>Financial Advisory</span>
+              </h1>
+              <p className={styles.heroSubtitle}>
+                Fairfield Accounting Services delivers expert tax preparation, bookkeeping, 
+                and strategic business advisory for individuals and growing companies.
+              </p>
+              <div className={styles.heroButtons}>
+                <Link href="/services" className="btn-primary">Our Services</Link>
+                <Link href="/booking" className={styles.btnLight}>Book a Consultation</Link>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection className={styles.heroImage} delay={0.4} direction="right">
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=500&fit=crop" 
+                alt="Modern office desk with laptop"
+              />
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 

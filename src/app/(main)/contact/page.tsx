@@ -94,6 +94,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       placeholder="John Smith"
                     />
                   </div>
@@ -108,6 +109,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
+                        aria-required="true"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -150,6 +152,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       rows={5}
                       placeholder="Tell us about your needs..."
                     />
