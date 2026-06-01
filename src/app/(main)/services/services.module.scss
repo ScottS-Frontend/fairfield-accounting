@@ -1,0 +1,131 @@
+@import '../../../styles/variables';
+
+.services {
+  padding-top: 80px;
+}
+
+.hero {
+  background: linear-gradient(135deg, $primary-navy 0%, $primary-blue 100%);
+  color: $white;
+  padding: $space-3xl 0;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: $space-md;
+
+    @media (max-width: $bp-tablet) {
+      font-size: 2.25rem;
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: rgba($white, 0.85);
+  }
+}
+
+.servicesGrid {
+  background: $off-white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-xl;
+
+  @media (max-width: $bp-desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.serviceCard {
+  background: $white;
+  padding: $space-xl;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-sm;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $dark-gray;
+    line-height: 1.6;
+    margin-bottom: $space-md;
+  }
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, $gold 0%, $gold-light 100%);
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary-navy;
+  font-size: 1.5rem;
+  margin-bottom: $space-lg;
+}
+
+.featureList {
+  li {
+    font-size: 0.8125rem;
+    color: $dark-gray;
+    padding: $space-xs 0;
+    padding-left: $space-md;
+    position: relative;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $success;
+      font-weight: 700;
+    }
+  }
+}
+
+.cta {
+  background: $primary-navy;
+  padding: $space-3xl 0;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: $space-md;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: rgba($white, 0.85);
+    margin-bottom: $space-xl;
+  }
+}

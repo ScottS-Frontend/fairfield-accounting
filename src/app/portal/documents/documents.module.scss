@@ -1,0 +1,139 @@
+@import '../../../styles/variables';
+
+.documents {
+  max-width: 1000px;
+}
+
+.pageHeader {
+  margin-bottom: $space-xl;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-xs;
+  }
+
+  p {
+    color: $medium-gray;
+    font-size: 0.9375rem;
+  }
+}
+
+.documentsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-lg;
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.documentCard {
+  background: $white;
+  border-radius: $radius-lg;
+  padding: $space-xl;
+  display: flex;
+  align-items: flex-start;
+  gap: $space-lg;
+  box-shadow: $shadow-sm;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: $shadow-md;
+  }
+}
+
+.fileIcon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+
+  svg {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  }
+}
+
+.pdfIcon {
+  color: #e53e3e;
+}
+
+.excelIcon {
+  color: #38a169;
+}
+
+.wordIcon {
+  color: #3182ce;
+}
+
+.docInfo {
+  flex: 1;
+  min-width: 0;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $primary-navy;
+    margin-bottom: $space-sm;
+    line-height: 1.4;
+  }
+}
+
+.docCategory {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: $gold;
+  margin-bottom: $space-xs;
+  display: block;
+}
+
+.docMeta {
+  display: flex;
+  gap: $space-md;
+  flex-wrap: wrap;
+  font-size: 0.8125rem;
+  color: $medium-gray;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+  }
+}
+
+.date {
+  svg {
+    font-size: 0.75rem;
+  }
+}
+
+.docActions {
+  display: flex;
+  gap: $space-sm;
+  flex-shrink: 0;
+}
+
+.actionBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-md;
+  background: $off-white;
+  color: $primary-navy;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $gold;
+    color: $primary-navy;
+  }
+
+  svg {
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,256 @@
+/* [project]/src/app/portal/settings/settings.module.scss.module.css [app-client] (css) */
+.settings-module-scss-module__MA-mkG__settings {
+  max-width: 800px;
+}
+
+.settings-module-scss-module__MA-mkG__pageHeader {
+  margin-bottom: 2rem;
+}
+
+.settings-module-scss-module__MA-mkG__pageHeader h1 {
+  color: #1a365d;
+  margin-bottom: .25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.settings-module-scss-module__MA-mkG__pageHeader p {
+  color: #a0aec0;
+  font-size: .9375rem;
+}
+
+.settings-module-scss-module__MA-mkG__settingsContainer {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.settings-module-scss-module__MA-mkG__tabs {
+  background: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+}
+
+@media (max-width: 640px) {
+  .settings-module-scss-module__MA-mkG__tabs {
+    flex-direction: column;
+  }
+}
+
+.settings-module-scss-module__MA-mkG__tab {
+  color: #a0aec0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2rem;
+  font-size: .9375rem;
+  font-weight: 600;
+  transition: all .3s;
+  display: flex;
+}
+
+.settings-module-scss-module__MA-mkG__tab svg {
+  font-size: 1rem;
+}
+
+.settings-module-scss-module__MA-mkG__tab:hover {
+  color: #1a365d;
+  background: rgba(201, 162, 39, .05);
+}
+
+.settings-module-scss-module__MA-mkG__tab.settings-module-scss-module__MA-mkG__active {
+  color: #1a365d;
+  background: #fff;
+  border-bottom-color: #c9a227;
+}
+
+.settings-module-scss-module__MA-mkG__tabContent {
+  padding: 2rem;
+}
+
+.settings-module-scss-module__MA-mkG__tabContent h2 {
+  color: #1a365d;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.settings-module-scss-module__MA-mkG__formGrid {
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  display: grid;
+}
+
+@media (max-width: 640px) {
+  .settings-module-scss-module__MA-mkG__formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.settings-module-scss-module__MA-mkG__formGroup {
+  flex-direction: column;
+  gap: .5rem;
+  display: flex;
+}
+
+.settings-module-scss-module__MA-mkG__formGroup.settings-module-scss-module__MA-mkG__fullWidth {
+  grid-column: 1 / -1;
+}
+
+.settings-module-scss-module__MA-mkG__formGroup label {
+  color: #2d3748;
+  align-items: center;
+  gap: .5rem;
+  font-size: .875rem;
+  font-weight: 600;
+  display: flex;
+}
+
+.settings-module-scss-module__MA-mkG__formGroup label svg {
+  color: #c9a227;
+  font-size: .875rem;
+}
+
+.settings-module-scss-module__MA-mkG__formGroup input {
+  color: #2d3748;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: .9375rem;
+  transition: border-color .3s;
+}
+
+.settings-module-scss-module__MA-mkG__formGroup input:focus {
+  border-color: #c9a227;
+  outline: none;
+}
+
+.settings-module-scss-module__MA-mkG__toggleList {
+  flex-direction: column;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.settings-module-scss-module__MA-mkG__toggleItem {
+  background: #f7fafc;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.settings-module-scss-module__MA-mkG__toggleInfo {
+  flex: 1;
+}
+
+.settings-module-scss-module__MA-mkG__toggleLabel {
+  color: #1a365d;
+  margin-bottom: .25rem;
+  font-weight: 600;
+  display: block;
+}
+
+.settings-module-scss-module__MA-mkG__toggleDesc {
+  color: #a0aec0;
+  font-size: .8125rem;
+}
+
+.settings-module-scss-module__MA-mkG__toggleSwitch {
+  cursor: pointer;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 13px;
+  flex-shrink: 0;
+  width: 48px;
+  height: 26px;
+  transition: background .3s;
+  position: relative;
+}
+
+.settings-module-scss-module__MA-mkG__toggleSwitch.settings-module-scss-module__MA-mkG__on {
+  background: #38a169;
+}
+
+.settings-module-scss-module__MA-mkG__toggleKnob {
+  background: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transition: transform .3s;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.settings-module-scss-module__MA-mkG__on .settings-module-scss-module__MA-mkG__toggleKnob {
+  transform: translateX(22px);
+}
+
+.settings-module-scss-module__MA-mkG__securitySection {
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 400px;
+  display: flex;
+}
+
+.settings-module-scss-module__MA-mkG__securityInfo {
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 1.5rem;
+}
+
+.settings-module-scss-module__MA-mkG__securityInfo p {
+  color: #1a365d;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.settings-module-scss-module__MA-mkG__securityInfo ul li {
+  color: #4a5568;
+  padding: .25rem 0 .25rem 1rem;
+  font-size: .875rem;
+  position: relative;
+}
+
+.settings-module-scss-module__MA-mkG__securityInfo ul li:before {
+  content: "•";
+  color: #c9a227;
+  position: absolute;
+  left: 0;
+}
+
+.settings-module-scss-module__MA-mkG__saveBtn {
+  color: #1a365d;
+  cursor: pointer;
+  background: #c9a227;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all .3s;
+  display: flex;
+}
+
+.settings-module-scss-module__MA-mkG__saveBtn:hover {
+  background: #d4af37;
+}
+
+.settings-module-scss-module__MA-mkG__saveBtn svg {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=src_app_portal_settings_settings_module_scss_module_f5379f8b.css.map*/

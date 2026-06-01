@@ -1,0 +1,197 @@
+/* [project]/src/app/(main)/page.module.scss.module.css [app-client] (css) */
+.page-module-scss-module__PlTSCG__home {
+  padding-top: 80px;
+}
+
+.page-module-scss-module__PlTSCG__hero {
+  color: #fff;
+  background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+  align-items: center;
+  min-height: 80vh;
+  padding: 4rem 0;
+  display: flex;
+}
+
+.page-module-scss-module__PlTSCG__heroContent {
+  max-width: 700px;
+}
+
+.page-module-scss-module__PlTSCG__heroTitle {
+  margin-bottom: 1.5rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+  .page-module-scss-module__PlTSCG__heroTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-module-scss-module__PlTSCG__heroTitle {
+    font-size: 2rem;
+  }
+}
+
+.page-module-scss-module__PlTSCG__goldAccent {
+  color: #c9a227;
+}
+
+.page-module-scss-module__PlTSCG__heroSubtitle {
+  color: rgba(255, 255, 255, .85);
+  max-width: 550px;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .page-module-scss-module__PlTSCG__heroSubtitle {
+    font-size: 1rem;
+  }
+}
+
+.page-module-scss-module__PlTSCG__heroButtons {
+  flex-wrap: wrap;
+  gap: 1rem;
+  display: flex;
+}
+
+.page-module-scss-module__PlTSCG__features {
+  background: #f7fafc;
+}
+
+.page-module-scss-module__PlTSCG__sectionTitle {
+  color: #1a365d;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .page-module-scss-module__PlTSCG__sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+.page-module-scss-module__PlTSCG__sectionSubtitle {
+  color: #4a5568;
+  max-width: 600px;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
+}
+
+.page-module-scss-module__PlTSCG__featureGrid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  display: grid;
+}
+
+@media (max-width: 1024px) {
+  .page-module-scss-module__PlTSCG__featureGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-module-scss-module__PlTSCG__featureGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-module-scss-module__PlTSCG__featureCard {
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform .3s, box-shadow .3s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+}
+
+.page-module-scss-module__PlTSCG__featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
+}
+
+.page-module-scss-module__PlTSCG__featureCard h3 {
+  color: #1a365d;
+  margin-bottom: .5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.page-module-scss-module__PlTSCG__featureCard p {
+  color: #4a5568;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+.page-module-scss-module__PlTSCG__featureIcon {
+  color: #1a365d;
+  background: linear-gradient(135deg, #c9a227 0%, #d4af37 100%);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+}
+
+.page-module-scss-module__PlTSCG__cta {
+  text-align: center;
+  background: #1a365d;
+  padding: 4rem 0;
+}
+
+.page-module-scss-module__PlTSCG__ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.page-module-scss-module__PlTSCG__ctaContent h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .page-module-scss-module__PlTSCG__ctaContent h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.page-module-scss-module__PlTSCG__ctaContent p {
+  color: rgba(255, 255, 255, .85);
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+.page-module-scss-module__PlTSCG__btnLight {
+  color: #1a365d;
+  background-color: #fff;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all .3s;
+  display: inline-flex;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+}
+
+.page-module-scss-module__PlTSCG__btnLight:hover {
+  background-color: #f7fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+}
+
+/*# sourceMappingURL=src_app_%28main%29_page_module_scss_module_269e72bb.css.map*/

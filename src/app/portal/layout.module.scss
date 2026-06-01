@@ -1,0 +1,177 @@
+@import '../../styles/variables';
+
+.portalLayout {
+  display: flex;
+  min-height: 100vh;
+  background: $off-white;
+}
+
+.mobileToggle {
+  display: none;
+  position: fixed;
+  top: $space-md;
+  left: $space-md;
+  z-index: 1001;
+  width: 44px;
+  height: 44px;
+  background: $white;
+  border-radius: $radius-md;
+  align-items: center;
+  justify-content: center;
+  color: $primary-navy;
+  font-size: 1.25rem;
+  box-shadow: $shadow-md;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: $bp-desktop) {
+    display: flex;
+  }
+}
+
+.sidebar {
+  width: 280px;
+  background: $primary-navy;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+
+  @media (max-width: $bp-desktop) {
+    transform: translateX(-100%);
+    
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* User Profile at TOP */
+.userProfile {
+  padding: $space-xl;
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  border-bottom: 1px solid rgba($white, 0.1);
+
+  img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid $gold;
+  }
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 1rem;
+  color: $white;
+}
+
+.userCompany {
+  font-size: 0.8125rem;
+  color: rgba($white, 0.7);
+}
+
+/* Navigation */
+.sidebarNav {
+  flex: 1;
+  padding: $space-lg 0;
+  overflow-y: auto;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  padding: $space-md $space-xl;
+  color: rgba($white, 0.7);
+  font-size:  1.175rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+
+  svg {
+    font-size: 1.125rem;
+  }
+
+  &:hover {
+    color: $white;
+    background: rgba($white, 0.05);
+  }
+
+  &.active {
+    color: $gold;
+    background: rgba($white, 0.05);
+    border-left-color: $gold;
+  }
+}
+
+/* Footer with Back Link and Logout */
+.sidebarFooter {
+  padding: $space-lg $space-xl;
+  border-top: 1px solid rgba($white, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-sm 0;
+  color: rgba($white, 0.7);
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+
+  svg {
+    font-size: 0.875rem;
+  }
+
+  &:hover {
+    color: $gold;
+  }
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  width: 100%;
+  padding: $space-sm 0;
+  color: rgba($white, 0.7);
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $error;
+  }
+}
+
+/* Main Content Area */
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  padding: $space-xl;
+  min-height: 100vh;
+
+  @media (max-width: $bp-desktop) {
+    margin-left: 0;
+    padding-top: 80px;
+  }
+}

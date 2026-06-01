@@ -1,0 +1,166 @@
+@import '../../styles/variables';
+
+.portalLogin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $primary-navy 0%, $primary-blue 100%);
+  padding: $space-xl;
+}
+
+.loginCard {
+  background: $white;
+  border-radius: $radius-lg;
+  padding: $space-2xl;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: $shadow-xl;
+}
+
+.loginHeader {
+  text-align: center;
+  margin-bottom: $space-xl;
+
+  .logoIcon {
+    width: 60px;
+    height: 60px;
+    background: $gold;
+    color: $primary-navy;
+    border-radius: $radius-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 auto $space-lg;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-xs;
+  }
+
+  p {
+    color: $medium-gray;
+    font-size: 0.875rem;
+  }
+}
+
+.error {
+  background: #fef2f2;
+  color: $error;
+  padding: $space-md;
+  border-radius: $radius-md;
+  margin-bottom: $space-lg;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.formGroup {
+  label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $charcoal;
+    margin-bottom: $space-sm;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-md;
+  border: 1px solid $light-gray;
+  border-radius: $radius-md;
+  transition: border-color 0.3s ease;
+
+  &:focus-within {
+    border-color: $gold;
+  }
+
+  svg {
+    color: $medium-gray;
+    font-size: 1rem;
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: $font-primary;
+    font-size: 1rem;
+    color: $charcoal;
+
+    &::placeholder {
+      color: $medium-gray;
+    }
+  }
+}
+
+.eyeBtn {
+  background: none;
+  border: none;
+  color: $medium-gray;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    color: $charcoal;
+  }
+}
+
+.loginBtn {
+  width: 100%;
+  padding: $space-md;
+  background: $gold;
+  color: $primary-navy;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $gold-light;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.loginFooter {
+  text-align: center;
+  margin-top: $space-xl;
+
+  a {
+    color: $primary-blue;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin-top: $space-md;
+    font-size: 0.75rem;
+    color: $medium-gray;
+  }
+}

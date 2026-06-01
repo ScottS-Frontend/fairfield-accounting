@@ -1,0 +1,223 @@
+/* [project]/src/app/portal/billing/billing.module.scss.module.css [app-client] (css) */
+.billing-module-scss-module__Py4Q5W__billing {
+  max-width: 1000px;
+}
+
+.billing-module-scss-module__Py4Q5W__pageHeader {
+  margin-bottom: 2rem;
+}
+
+.billing-module-scss-module__Py4Q5W__pageHeader h1 {
+  color: #1a365d;
+  margin-bottom: .25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.billing-module-scss-module__Py4Q5W__pageHeader p {
+  color: #a0aec0;
+  font-size: .9375rem;
+}
+
+.billing-module-scss-module__Py4Q5W__summaryGrid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+}
+
+@media (max-width: 640px) {
+  .billing-module-scss-module__Py4Q5W__summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.billing-module-scss-module__Py4Q5W__summaryCard {
+  text-align: center;
+  background: #fff;
+  border-top: 4px solid #c9a227;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.billing-module-scss-module__Py4Q5W__summaryCard.billing-module-scss-module__Py4Q5W__unpaid {
+  border-top-color: #dd6b20;
+}
+
+.billing-module-scss-module__Py4Q5W__summaryCard .billing-module-scss-module__Py4Q5W__summaryLabel {
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #a0aec0;
+  margin-bottom: .5rem;
+  font-size: .75rem;
+  font-weight: 600;
+  display: block;
+}
+
+.billing-module-scss-module__Py4Q5W__summaryCard .billing-module-scss-module__Py4Q5W__summaryValue {
+  color: #1a365d;
+  font-size: 1.75rem;
+  font-weight: 800;
+  display: block;
+}
+
+.billing-module-scss-module__Py4Q5W__invoicesSection h2 {
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.billing-module-scss-module__Py4Q5W__invoicesList {
+  flex-direction: column;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.billing-module-scss-module__Py4Q5W__invoiceCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.billing-module-scss-module__Py4Q5W__invoiceHeader {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.billing-module-scss-module__Py4Q5W__invoiceInfo h3 {
+  color: #1a365d;
+  margin-top: .25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.billing-module-scss-module__Py4Q5W__invoiceId {
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.billing-module-scss-module__Py4Q5W__statusBadge {
+  border-radius: 16px;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  font-size: .875rem;
+  font-weight: 600;
+  display: flex;
+}
+
+.billing-module-scss-module__Py4Q5W__statusBadge svg {
+  font-size: 1rem;
+}
+
+.billing-module-scss-module__Py4Q5W__statusBadge.billing-module-scss-module__Py4Q5W__statusPaid {
+  color: #38a169;
+  background: #f0fff4;
+}
+
+.billing-module-scss-module__Py4Q5W__statusBadge.billing-module-scss-module__Py4Q5W__statusUnpaid {
+  color: #dd6b20;
+  background: #fffaf0;
+}
+
+.billing-module-scss-module__Py4Q5W__statusBadge.billing-module-scss-module__Py4Q5W__statusOverdue {
+  color: #e53e3e;
+  background: #fef2f2;
+}
+
+.billing-module-scss-module__Py4Q5W__invoiceDetails {
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 0;
+  display: grid;
+}
+
+.billing-module-scss-module__Py4Q5W__detailItem {
+  flex-direction: column;
+  gap: .25rem;
+  display: flex;
+}
+
+.billing-module-scss-module__Py4Q5W__detailItem span {
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: .75rem;
+}
+
+.billing-module-scss-module__Py4Q5W__detailItem strong {
+  color: #2d3748;
+  font-size: .9375rem;
+  font-weight: 600;
+}
+
+.billing-module-scss-module__Py4Q5W__paymentActions {
+  flex-wrap: wrap;
+  gap: 1rem;
+  display: flex;
+}
+
+.billing-module-scss-module__Py4Q5W__payBtn {
+  color: #1a365d;
+  cursor: pointer;
+  background: #c9a227;
+  border: none;
+  border-radius: 8px;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2rem;
+  font-size: .9375rem;
+  font-weight: 700;
+  transition: all .3s;
+  display: inline-flex;
+}
+
+.billing-module-scss-module__Py4Q5W__payBtn:hover {
+  background: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+}
+
+.billing-module-scss-module__Py4Q5W__payBtn svg {
+  font-size: 1rem;
+}
+
+.billing-module-scss-module__Py4Q5W__payBtnPaypal {
+  color: #fff;
+  cursor: pointer;
+  background: #003087;
+  border: none;
+  border-radius: 8px;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 2rem;
+  font-size: .9375rem;
+  font-weight: 700;
+  transition: all .3s;
+  display: inline-flex;
+}
+
+.billing-module-scss-module__Py4Q5W__payBtnPaypal:hover {
+  background: #002670;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+}
+
+.billing-module-scss-module__Py4Q5W__payBtnPaypal svg {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=src_app_portal_billing_billing_module_scss_module_70c0933c.css.map*/

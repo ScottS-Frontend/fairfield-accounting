@@ -1,0 +1,327 @@
+@import '../../../styles/variables';
+
+.messages {
+  max-width: 1100px;
+}
+
+.pageHeader {
+  margin-bottom: $space-xl;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-xs;
+  }
+
+  p {
+    color: $medium-gray;
+    font-size: 0.9375rem;
+  }
+}
+
+.messagesContainer {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: $space-xl;
+  background: $white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+  min-height: 600px;
+
+  @media (max-width: $bp-desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Message List */
+.messageList {
+  border-right: 1px solid $light-gray;
+  overflow-y: auto;
+  max-height: 600px;
+
+  @media (max-width: $bp-desktop) {
+    border-right: none;
+    border-bottom: 1px solid $light-gray;
+    max-height: 300px;
+  }
+}
+
+.messagePreview {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-md;
+  padding: $space-lg;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-bottom: 1px solid $light-gray;
+  position: relative;
+
+  &:hover {
+    background: $off-white;
+  }
+
+  &.active {
+    background: $off-white;
+    border-left: 3px solid $gold;
+  }
+
+  &.unread {
+    background: rgba($gold, 0.05);
+  }
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.previewContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $space-xs;
+
+  h4 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: $primary-navy;
+  }
+}
+
+.previewDate {
+  font-size: 0.75rem;
+  color: $medium-gray;
+}
+
+.previewRole {
+  font-size: 0.75rem;
+  color: $gold;
+  font-weight: 500;
+  display: block;
+  margin-bottom: $space-xs;
+}
+
+.previewText {
+  font-size: 0.8125rem;
+  color: $dark-gray;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unreadDot {
+  width: 8px;
+  height: 8px;
+  background: $gold;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: $space-sm;
+}
+
+/* Message Detail */
+.messageDetail {
+  padding: $space-xl;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.detailHeader {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  padding-bottom: $space-lg;
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: $space-lg;
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $primary-navy;
+  }
+
+  span {
+    font-size: 0.8125rem;
+    color: $medium-gray;
+  }
+}
+
+.detailAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.conversation {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.originalMessage {
+  background: $off-white;
+  padding: $space-lg;
+  border-radius: $radius-md;
+  margin-bottom: $space-lg;
+
+  p {
+    font-size: 0.9375rem;
+    color: $charcoal;
+    line-height: 1.6;
+  }
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $space-sm;
+  flex-wrap: wrap;
+  gap: $space-sm;
+}
+
+.messageSubject {
+  font-weight: 600;
+  color: $primary-navy;
+  font-size: 0.9375rem;
+}
+
+.messageTime {
+  font-size: 0.75rem;
+  color: $medium-gray;
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+
+  svg {
+    font-size: 0.625rem;
+  }
+}
+
+.reply {
+  padding: $space-md $space-lg;
+  margin-bottom: $space-md;
+  border-radius: $radius-md;
+  background: $off-white;
+  max-width: 80%;
+
+  p {
+    font-size: 0.875rem;
+    color: $charcoal;
+    line-height: 1.5;
+  }
+}
+
+.userReply {
+  background: linear-gradient(135deg, $primary-navy 0%, $primary-blue 100%);
+  color: $white;
+  margin-left: auto;
+
+  p {
+    color: $white;
+  }
+}
+
+.replyHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $space-xs;
+}
+
+.replySender {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: $gold;
+}
+
+.replyTime {
+  font-size: 0.75rem;
+  color: $medium-gray;
+}
+
+.userReply .replySender,
+.userReply .replyTime {
+  color: rgba($white, 0.8);
+}
+
+.readReceipt {
+  font-size: 0.75rem;
+  color: $success;
+  margin-top: $space-xs;
+  float: right;
+}
+
+/* Reply Box */
+.replyBox {
+  margin-top: $space-lg;
+  padding-top: $space-lg;
+  border-top: 1px solid $light-gray;
+
+  textarea {
+    width: 100%;
+    padding: $space-md;
+    border: 1px solid $light-gray;
+    border-radius: $radius-md;
+    font-family: $font-primary;
+    font-size: 0.9375rem;
+    resize: vertical;
+    margin-bottom: $space-md;
+
+    &:focus {
+      outline: none;
+      border-color: $gold;
+    }
+  }
+}
+
+.sendBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-md $space-xl;
+  background: $gold;
+  color: $primary-navy;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $gold-light;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: $medium-gray;
+
+  p {
+    font-size: 0.9375rem;
+  }
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: $space-md;
+  color: $light-gray;
+}

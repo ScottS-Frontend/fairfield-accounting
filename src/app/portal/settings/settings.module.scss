@@ -1,0 +1,260 @@
+@import '../../../styles/variables';
+
+.settings {
+  max-width: 800px;
+}
+
+.pageHeader {
+  margin-bottom: $space-xl;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-xs;
+  }
+
+  p {
+    color: $medium-gray;
+    font-size: 0.9375rem;
+  }
+}
+
+.settingsContainer {
+  background: $white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid $light-gray;
+  background: $off-white;
+
+  @media (max-width: $bp-mobile) {
+    flex-direction: column;
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-md $space-xl;
+  background: none;
+  border: none;
+  color: $medium-gray;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+
+  svg {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    color: $primary-navy;
+    background: rgba($gold, 0.05);
+  }
+
+  &.active {
+    color: $primary-navy;
+    background: $white;
+    border-bottom-color: $gold;
+  }
+}
+
+/* Tab Content */
+.tabContent {
+  padding: $space-xl;
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-xl;
+  }
+}
+
+/* Form Grid */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-lg;
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  &.fullWidth {
+    grid-column: 1 / -1;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $charcoal;
+
+    svg {
+      color: $gold;
+      font-size: 0.875rem;
+    }
+  }
+
+  input {
+    padding: $space-md;
+    border: 1px solid $light-gray;
+    border-radius: $radius-md;
+    font-family: $font-primary;
+    font-size: 0.9375rem;
+    color: $charcoal;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $gold;
+    }
+  }
+}
+
+/* Toggle List */
+.toggleList {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.toggleItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $space-lg;
+  background: $off-white;
+  border-radius: $radius-md;
+  flex-wrap: wrap;
+  gap: $space-md;
+}
+
+.toggleInfo {
+  flex: 1;
+}
+
+.toggleLabel {
+  display: block;
+  font-weight: 600;
+  color: $primary-navy;
+  margin-bottom: $space-xs;
+}
+
+.toggleDesc {
+  font-size: 0.8125rem;
+  color: $medium-gray;
+}
+
+.toggleSwitch {
+  width: 48px;
+  height: 26px;
+  background: $light-gray;
+  border-radius: 13px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+
+  &.on {
+    background: $success;
+  }
+}
+
+.toggleKnob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: $white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: $shadow-sm;
+
+  .on & {
+    transform: translateX(22px);
+  }
+}
+
+/* Security */
+.securitySection {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+  max-width: 400px;
+}
+
+.securityInfo {
+  background: $off-white;
+  padding: $space-lg;
+  border-radius: $radius-md;
+  margin-top: $space-md;
+
+  p {
+    font-weight: 600;
+    color: $primary-navy;
+    margin-bottom: $space-sm;
+  }
+
+  ul {
+    li {
+      font-size: 0.875rem;
+      color: $dark-gray;
+      padding: $space-xs 0;
+      padding-left: $space-md;
+      position: relative;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: $gold;
+      }
+    }
+  }
+}
+
+/* Save Button */
+.saveBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  width: 100%;
+  padding: $space-md;
+  background: $gold;
+  color: $primary-navy;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $gold-light;
+  }
+
+  svg {
+    font-size: 1rem;
+  }
+}

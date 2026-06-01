@@ -1,0 +1,379 @@
+/* [project]/src/app/globals.scss.css [app-client] (css) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #2d3748;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+.section-padding {
+  padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.gold-text {
+  color: #c9a227;
+}
+
+.navy-text {
+  color: #1a365d;
+}
+
+.btn-primary {
+  color: #1a365d;
+  background-color: #c9a227;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all .3s;
+  display: inline-flex;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+}
+
+.btn-primary:hover {
+  background-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+}
+
+.btn-secondary {
+  color: #1a365d;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #1a365d;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all .3s;
+  display: inline-flex;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #1a365d;
+}
+
+/* [project]/src/components/layout/Navbar.module.scss.module.css [app-client] (css) */
+.Navbar-module-scss-module__3AB87a__navbar {
+  z-index: 1000;
+  background: none;
+  padding: 1rem 0;
+  transition: all .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Navbar-module-scss-module__3AB87a__navbar.Navbar-module-scss-module__3AB87a__scrolled {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, .95);
+  padding: .5rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+}
+
+.Navbar-module-scss-module__3AB87a__navContent {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.Navbar-module-scss-module__3AB87a__logo {
+  color: #1a365d;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.Navbar-module-scss-module__3AB87a__logoIcon {
+  color: #1a365d;
+  background: #c9a227;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: .875rem;
+  font-weight: 800;
+  display: flex;
+}
+
+.Navbar-module-scss-module__3AB87a__logoText {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .Navbar-module-scss-module__3AB87a__logoText {
+    display: block;
+  }
+}
+
+.Navbar-module-scss-module__3AB87a__mobileToggle {
+  color: #1a365d;
+  cursor: pointer;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .Navbar-module-scss-module__3AB87a__mobileToggle {
+    display: none;
+  }
+}
+
+.Navbar-module-scss-module__3AB87a__navLinks {
+  background: #fff;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+}
+
+.Navbar-module-scss-module__3AB87a__navLinks.Navbar-module-scss-module__3AB87a__active {
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .Navbar-module-scss-module__3AB87a__navLinks {
+    box-shadow: none;
+    background: none;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0;
+    display: flex;
+    position: static;
+  }
+}
+
+.Navbar-module-scss-module__3AB87a__navLink {
+  color: #2d3748;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  font-size: .875rem;
+  font-weight: 500;
+  transition: color .3s;
+  display: block;
+}
+
+.Navbar-module-scss-module__3AB87a__navLink:hover {
+  color: #c9a227;
+}
+
+.Navbar-module-scss-module__3AB87a__navLink.Navbar-module-scss-module__3AB87a__activeLink {
+  color: #c9a227;
+  font-weight: 600;
+}
+
+/* [project]/src/components/layout/Footer.module.scss.module.css [app-client] (css) */
+.Footer-module-scss-module__JLT4gq__footer {
+  color: #e2e8f0;
+  background: #1a365d;
+  padding: 4rem 0 2rem;
+}
+
+.Footer-module-scss-module__JLT4gq__footerContent {
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .Footer-module-scss-module__JLT4gq__footerContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .Footer-module-scss-module__JLT4gq__footerContent {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+}
+
+.Footer-module-scss-module__JLT4gq__footerLogo {
+  color: #c9a227;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.Footer-module-scss-module__JLT4gq__footerTagline {
+  color: #a0aec0;
+  max-width: 300px;
+  margin-bottom: 1.5rem;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.Footer-module-scss-module__JLT4gq__socialLinks {
+  gap: 1rem;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__socialLinks a {
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: all .3s;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__socialLinks a:hover {
+  color: #1a365d;
+  background: #c9a227;
+}
+
+.Footer-module-scss-module__JLT4gq__footerLinks h4, .Footer-module-scss-module__JLT4gq__footerServices h4, .Footer-module-scss-module__JLT4gq__footerContact h4 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.Footer-module-scss-module__JLT4gq__footerLinks ul, .Footer-module-scss-module__JLT4gq__footerServices ul, .Footer-module-scss-module__JLT4gq__footerContact ul {
+  flex-direction: column;
+  gap: .5rem;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__footerLinks li a, .Footer-module-scss-module__JLT4gq__footerServices li a, .Footer-module-scss-module__JLT4gq__footerContact li a {
+  color: #a0aec0;
+  font-size: .875rem;
+  transition: color .3s;
+}
+
+.Footer-module-scss-module__JLT4gq__footerLinks li a:hover, .Footer-module-scss-module__JLT4gq__footerServices li a:hover, .Footer-module-scss-module__JLT4gq__footerContact li a:hover {
+  color: #c9a227;
+}
+
+.Footer-module-scss-module__JLT4gq__footerContact li {
+  color: #a0aec0;
+  align-items: center;
+  gap: .5rem;
+  font-size: .875rem;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__footerContact li svg {
+  color: #c9a227;
+  flex-shrink: 0;
+}
+
+.Footer-module-scss-module__JLT4gq__footerBottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .Footer-module-scss-module__JLT4gq__footerBottom {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.Footer-module-scss-module__JLT4gq__footerBottom p {
+  color: #a0aec0;
+  font-size: .875rem;
+}
+
+.Footer-module-scss-module__JLT4gq__footerLegal {
+  gap: 1.5rem;
+  display: flex;
+}
+
+.Footer-module-scss-module__JLT4gq__footerLegal a {
+  color: #a0aec0;
+  font-size: .875rem;
+  transition: color .3s;
+}
+
+.Footer-module-scss-module__JLT4gq__footerLegal a:hover {
+  color: #c9a227;
+}
+
+/*# sourceMappingURL=src_df3a7afa._.css.map*/

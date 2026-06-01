@@ -1,0 +1,113 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  color: $charcoal;
+  background-color: $white;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $space-lg;
+
+  @media (max-width: $bp-mobile) {
+    padding: 0 $space-md;
+  }
+}
+
+.section-padding {
+  padding: $space-3xl 0;
+
+  @media (max-width: $bp-tablet) {
+    padding: $space-2xl 0;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Utility classes
+.gold-text {
+  color: $gold;
+}
+
+.navy-text {
+  color: $primary-navy;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-md $space-xl;
+  background-color: $gold;
+  color: $primary-navy;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: $radius-md;
+  transition: all 0.3s ease;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    background-color: $gold-light;
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-md $space-xl;
+  background-color: transparent;
+  color: $primary-navy;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid $primary-navy;
+  border-radius: $radius-md;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $primary-navy;
+    color: $white;
+  }
+}

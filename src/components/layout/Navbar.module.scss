@@ -1,0 +1,118 @@
+@import '../../styles/variables';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: $space-md 0;
+
+  &.scrolled {
+    background: rgba($white, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: $shadow-md;
+    padding: $space-sm 0;
+  }
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: $primary-navy;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: $gold;
+  color: $primary-navy;
+  border-radius: $radius-sm;
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+.logoText {
+  display: none;
+
+  @media (min-width: $bp-mobile) {
+    display: block;
+  }
+}
+
+.mobileToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: $primary-navy;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $bp-desktop) {
+    display: none;
+  }
+}
+
+.navLinks {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: $white;
+  flex-direction: column;
+  padding: $space-md;
+  box-shadow: $shadow-lg;
+  gap: $space-sm;
+
+  &.active {
+    display: flex;
+  }
+
+  @media (min-width: $bp-desktop) {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    gap: $space-lg;
+  }
+}
+
+.navLink {
+  display: block;
+  padding: $space-sm $space-md;
+  color: $charcoal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+  border-radius: $radius-sm;
+
+  &:hover {
+    color: $gold;
+  }
+
+  &.activeLink {
+    color: $gold;
+    font-weight: 600;
+  }
+}

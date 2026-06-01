@@ -1,0 +1,172 @@
+@import '../../../styles/variables';
+
+.contact {
+  padding-top: 80px;
+}
+
+.hero {
+  background: linear-gradient(135deg, $primary-navy 0%, $primary-blue 100%);
+  color: $white;
+  padding: $space-3xl 0;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: $space-md;
+
+    @media (max-width: $bp-tablet) {
+      font-size: 2.25rem;
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: rgba($white, 0.85);
+  }
+}
+
+.contactSection {
+  background: $off-white;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: $space-3xl;
+
+  @media (max-width: $bp-desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contactInfo {
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-sm;
+  }
+
+  > p {
+    color: $dark-gray;
+    margin-bottom: $space-xl;
+    line-height: 1.6;
+  }
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-md;
+
+  svg {
+    color: $gold;
+    font-size: 1.25rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $medium-gray;
+    margin-bottom: $space-xs;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $charcoal;
+    font-weight: 500;
+  }
+}
+
+.formWrapper {
+  background: $white;
+  padding: $space-xl;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+}
+
+.form {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-xl;
+  }
+}
+
+.formGroup {
+  margin-bottom: $space-lg;
+
+  label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $charcoal;
+    margin-bottom: $space-sm;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: $space-md;
+    border: 1px solid $light-gray;
+    border-radius: $radius-md;
+    font-family: $font-primary;
+    font-size: 1rem;
+    color: $charcoal;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $gold;
+    }
+
+    &::placeholder {
+      color: $medium-gray;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-lg;
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.successMessage {
+  text-align: center;
+  padding: $space-2xl;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $success;
+    margin-bottom: $space-md;
+  }
+
+  p {
+    color: $dark-gray;
+  }
+}

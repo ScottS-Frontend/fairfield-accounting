@@ -1,0 +1,227 @@
+@import '../../../styles/variables';
+
+.billing {
+  max-width: 1000px;
+}
+
+.pageHeader {
+  margin-bottom: $space-xl;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-xs;
+  }
+
+  p {
+    color: $medium-gray;
+    font-size: 0.9375rem;
+  }
+}
+
+/* Summary Cards */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-lg;
+  margin-bottom: $space-xl;
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.summaryCard {
+  background: $white;
+  border-radius: $radius-lg;
+  padding: $space-xl;
+  box-shadow: $shadow-sm;
+  text-align: center;
+  border-top: 4px solid $gold;
+
+  &.unpaid {
+    border-top-color: $warning;
+  }
+
+  .summaryLabel {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $medium-gray;
+    margin-bottom: $space-sm;
+  }
+
+  .summaryValue {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: $primary-navy;
+  }
+}
+
+/* Invoices */
+.invoicesSection {
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $primary-navy;
+    margin-bottom: $space-lg;
+  }
+}
+
+.invoicesList {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.invoiceCard {
+  background: $white;
+  border-radius: $radius-lg;
+  padding: $space-xl;
+  box-shadow: $shadow-sm;
+}
+
+.invoiceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $space-lg;
+  flex-wrap: wrap;
+  gap: $space-md;
+}
+
+.invoiceInfo {
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $primary-navy;
+    margin-top: $space-xs;
+  }
+}
+
+.invoiceId {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $medium-gray;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-sm $space-md;
+  border-radius: $radius-xl;
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  svg {
+    font-size: 1rem;
+  }
+
+  &.statusPaid {
+    background: #f0fff4;
+    color: $success;
+  }
+
+  &.statusUnpaid {
+    background: #fffaf0;
+    color: $warning;
+  }
+
+  &.statusOverdue {
+    background: #fef2f2;
+    color: $error;
+  }
+}
+
+.invoiceDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: $space-md;
+  padding: $space-lg 0;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: $space-lg;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+
+  span {
+    font-size: 0.75rem;
+    color: $medium-gray;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  strong {
+    font-size: 0.9375rem;
+    color: $charcoal;
+    font-weight: 600;
+  }
+}
+
+/* Payment Buttons */
+.paymentActions {
+  display: flex;
+  gap: $space-md;
+  flex-wrap: wrap;
+}
+
+.payBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-md $space-xl;
+  background: $gold;
+  color: $primary-navy;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $gold-light;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  svg {
+    font-size: 1rem;
+  }
+}
+
+.payBtnPaypal {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-md $space-xl;
+  background: #003087;
+  color: $white;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #002670;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  svg {
+    font-size: 1rem;
+  }
+}
