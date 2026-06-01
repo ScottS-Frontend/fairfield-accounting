@@ -85,11 +85,38 @@ ul, ol {
   border-radius: $radius-md;
   transition: all 0.3s ease;
   box-shadow: $shadow-md;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%
+    );
+    transform: rotate(30deg) translateX(-100%);
+    transition: transform 0.6s ease;
+  }
 
   &:hover {
     background-color: $gold-light;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: $shadow-lg;
+
+    &::after {
+      transform: rotate(30deg) translateX(100%);
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
   }
 }
 
@@ -105,9 +132,28 @@ ul, ol {
   border: 2px solid $primary-navy;
   border-radius: $radius-md;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $primary-navy;
+    transition: width 0.4s ease;
+    z-index: -1;
+  }
 
   &:hover {
-    background-color: $primary-navy;
     color: $white;
+    transform: translateY(-3px);
+    box-shadow: $shadow-md;
+
+    &::before {
+      width: 100%;
+    }
   }
 }

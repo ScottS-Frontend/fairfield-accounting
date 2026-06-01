@@ -106,13 +106,34 @@
   font-size: 0.875rem;
   transition: color 0.3s ease;
   border-radius: $radius-sm;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: $gold;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
 
   &:hover {
     color: $gold;
+
+    &::after {
+      width: 60%;
+    }
   }
 
   &.activeLink {
     color: $gold;
     font-weight: 600;
+
+    &::after {
+      width: 60%;
+    }
   }
 }

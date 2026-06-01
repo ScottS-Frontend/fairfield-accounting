@@ -3,10 +3,11 @@
 import React, { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { FaCheck, FaStar } from 'react-icons/fa';
+import StaggerContainer from '@/components/animations/StaggerContainer';
+import StaggerItem from '@/components/animations/StaggerItem';
 import styles from './shop.module.scss';
 
-// Replace with your real Stripe publishable key when ready
-const stripePromise = loadStripe('pk_test_51TC5TN3XaYDiEuZAdY5Ma2W6Kx5hamBzpWcJyYLyVH012GgzdsQ6ZeiFkitMDwwLM3UObqigOaIMwnsVZE1hTCH300Z5MSLZZR');
+const stripePromise = loadStripe('pk_test_your_publishable_key_here');
 
 const packages = [
   {
@@ -61,9 +62,6 @@ export default function ShopPage() {
 
   const handleCheckout = async (packageId: string, priceCents: number) => {
     setLoading(packageId);
-    
-    // In a real app, you'd call your backend to create a Stripe Checkout session
-    // For demo purposes, we'll show an alert
     setTimeout(() => {
       alert(`This is a demo. In production, this would redirect to Stripe Checkout for $${(priceCents / 100).toFixed(2)}`);
       setLoading(null);
@@ -81,44 +79,43 @@ export default function ShopPage() {
 
       <section className={`${styles.packages} section-padding`}>
         <div className="container">
-          <div className={styles.packagesGrid}>
+          <StaggerContainer className={styles.packagesGrid} staggerDelay={0.15}>
             {packages.map((pkg) => (
-              <div 
-                key={pkg.id} 
-                className={`${styles.packageCard} ${pkg.popular ? styles.popular : ''}`}
-              >
-                {pkg.popular && (
-                  <div className={styles.popularBadge}>
-                    <FaStar /> Most Popular
+              <StaggerItem key={pkg.id}>
+                <div className={`${styles.packageCard} ${pkg.popular ? styles.popular : ''}`}>
+                  {pkg.popular && (
+                    <div className={styles.popularBadge}>
+                      <FaStar /> Most Popular
+                    </div>
+                  )}
+                  
+                  <h3>{pkg.name}</h3>
+                  <div className={styles.price}>
+                    <span className={styles.amount}>{pkg.price}</span>
+                    <span className={styles.period}>one-time</span>
                   </div>
-                )}
-                
-                <h3>{pkg.name}</h3>
-                <div className={styles.price}>
-                  <span className={styles.amount}>{pkg.price}</span>
-                  <span className={styles.period}>one-time</span>
-                </div>
-                <p className={styles.description}>{pkg.description}</p>
-                
-                <ul className={styles.features}>
-                  {pkg.features.map((feature, i) => (
-                    <li key={i}>
-                      <FaCheck />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                  <p className={styles.description}>{pkg.description}</p>
+                  
+                  <ul className={styles.features}>
+                    {pkg.features.map((feature, i) => (
+                      <li key={i}>
+                        <FaCheck />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
 
-                <button
-                  onClick={() => handleCheckout(pkg.id, pkg.priceCents)}
-                  className={styles.checkoutBtn}
-                  disabled={loading === pkg.id}
-                >
-                  {loading === pkg.id ? 'Processing...' : 'Get Started'}
-                </button>
-              </div>
+                  <button
+                    onClick={() => handleCheckout(pkg.id, pkg.priceCents)}
+                    className={styles.checkoutBtn}
+                    disabled={loading === pkg.id}
+                  >
+                    {loading === pkg.id ? 'Processing...' : 'Get Started'}
+                  </button>
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           <div className={styles.disclaimer}>
             <p>

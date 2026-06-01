@@ -1,20 +1,21 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { FaCalendarCheck, FaVideo, FaPhone, FaBuilding } from 'react-icons/fa';
+import { FaVideo, FaPhone, FaBuilding } from 'react-icons/fa';
+import AnimatedSection from '@/components/animations/AnimatedSection';
 import styles from './booking.module.scss';
 
 export default function BookingPage() {
   useEffect(() => {
-    // Load Calendly widget script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    const existingScript = document.getElementById('calendly-script');
+    
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.id = 'calendly-script';
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, []);
 
   return (
@@ -29,8 +30,7 @@ export default function BookingPage() {
       <section className={`${styles.bookingSection} section-padding`}>
         <div className="container">
           <div className={styles.bookingGrid}>
-            {/* Info Side */}
-            <div className={styles.bookingInfo}>
+            <AnimatedSection className={styles.bookingInfo} delay={0.1}>
               <h2>What to Expect</h2>
               <p>
                 During your free consultation, we'll discuss your financial situation, 
@@ -71,9 +71,8 @@ export default function BookingPage() {
                   <li>Any relevant deadlines</li>
                 </ul>
               </div>
-            </div>
+            </AnimatedSection>
 
-            {/* Calendly Widget Side */}
             <div className={styles.calendlyWrapper}>
               <div 
                 className="calendly-inline-widget" 

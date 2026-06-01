@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import StaggerContainer from '@/components/animations/StaggerContainer';
+import StaggerItem from '@/components/animations/StaggerItem';
 import styles from './team.module.scss';
 
 const teamMembers = [
@@ -41,28 +43,30 @@ export default function TeamPage() {
 
       <section className={`${styles.teamGrid} section-padding`}>
         <div className="container">
-          <div className={styles.grid}>
+          <StaggerContainer className={styles.grid} staggerDelay={0.15}>
             {teamMembers.map((member, index) => (
-              <div key={index} className={styles.memberCard}>
-                <div className={styles.imageWrapper}>
-                  <img src={member.image} alt={member.name} />
-                </div>
-                <div className={styles.memberInfo}>
-                  <h3>{member.name}</h3>
-                  <span className={styles.title}>{member.title}</span>
-                  <p>{member.bio}</p>
-                  <div className={styles.socialLinks}>
-                    <a href="#" aria-label={`Email ${member.name}`}>
-                      <FaEnvelope />
-                    </a>
-                    <a href="#" aria-label={`${member.name} LinkedIn`}>
-                      <FaLinkedin />
-                    </a>
+              <StaggerItem key={index}>
+                <div className={styles.memberCard}>
+                  <div className={styles.imageWrapper}>
+                    <img src={member.image} alt={member.name} />
+                  </div>
+                  <div className={styles.memberInfo}>
+                    <h3>{member.name}</h3>
+                    <span className={styles.title}>{member.title}</span>
+                    <p>{member.bio}</p>
+                    <div className={styles.socialLinks}>
+                      <a href="#" aria-label={`Email ${member.name}`}>
+                        <FaEnvelope />
+                      </a>
+                      <a href="#" aria-label={`${member.name} LinkedIn`}>
+                        <FaLinkedin />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
     </div>

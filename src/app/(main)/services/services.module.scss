@@ -49,11 +49,35 @@
   padding: $space-xl;
   border-radius: $radius-lg;
   box-shadow: $shadow-md;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $gold, $gold-light);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: $shadow-xl;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(26, 54, 93, 0.15);
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .iconWrapper {
+      transform: rotate(-5deg) scale(1.1);
+      box-shadow: 0 8px 20px rgba(201, 162, 39, 0.3);
+    }
   }
 
   h3 {
@@ -82,6 +106,7 @@
   color: $primary-navy;
   font-size: 1.5rem;
   margin-bottom: $space-lg;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .featureList {

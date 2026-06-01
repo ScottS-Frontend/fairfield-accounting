@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import AnimatedSection from '@/components/animations/AnimatedSection';
 import styles from './contact.module.scss';
 
 export default function ContactPage() {
@@ -22,7 +23,6 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
-    // In a real app, you'd send this to your backend
   };
 
   return (
@@ -38,7 +38,7 @@ export default function ContactPage() {
         <div className="container">
           <div className={styles.contactGrid}>
             {/* Contact Info */}
-            <div className={styles.contactInfo}>
+            <AnimatedSection className={styles.contactInfo} delay={0.1}>
               <h2>Get in Touch</h2>
               <p>Our team is ready to assist you with your accounting needs.</p>
               
@@ -72,10 +72,10 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
 
             {/* Contact Form */}
-            <div className={styles.formWrapper}>
+            <AnimatedSection className={styles.formWrapper} delay={0.2} direction="right">
               {submitted ? (
                 <div className={styles.successMessage}>
                   <h3>Thank you!</h3>
@@ -160,7 +160,7 @@ export default function ContactPage() {
                   </button>
                 </form>
               )}
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
