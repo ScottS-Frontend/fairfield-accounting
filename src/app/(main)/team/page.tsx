@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import StaggerContainer from "@/components/animations/StaggerContainer";
 import StaggerItem from "@/components/animations/StaggerItem";
-import styles from "./services.module.scss";
+import styles from "./team.module.scss";
 
 const services = [
   {
